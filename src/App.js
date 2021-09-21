@@ -1,16 +1,16 @@
-import HornedBeast from './HornedBeast';
+
 import './App.css';
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Main from './Main';
 
 function App() {
   return (
     <>
-        <header><h1>Horns</h1></header>
-        <main>
-          <div><HornedBeast/></div>
-          <div><HornedBeast/></div>
-        </main>
-        <footer>Chris Rarig</footer>
-        
+       <Header />
+       <Main/>
+        <Footer />
     </>
   );
 }
