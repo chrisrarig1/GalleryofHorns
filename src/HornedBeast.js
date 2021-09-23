@@ -1,5 +1,10 @@
 import React from "react";
 import './HornedBeast.css';
+import Card from 'react-bootstrap/Card';
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 
 
 class HornedBeast extends React.Component{
@@ -18,24 +23,33 @@ class HornedBeast extends React.Component{
         console.log('voted');
     }
 
-    // favorite = () => {
-    //     if(fav === true){
-
-    //     }
-    // }
-    //ternary statement is if/else rolled into one. evaluation ? true : false
-
+    favorite = () => {
+       if(this.state.Fav){
+            this.setState({Fav: false});
+       }else{
+            this.setState({Fav: true});
+       }
+       
+    }
+    //ternary statement is if/else rolled into one. evaluation ? true : fals 
     render(){
     return( 
-    <div className='beasts'>
-        <h2>{this.props.title}</h2>
-        <img src={this.props.image} alt={this.props.keyword} horns={this.props.horns}></img>
-        <p>{this.props.description}</p>
-        <p>total votes: {this.state.votes}</p>
-        <button onClick={this.add}>Vote</button>
-    </div>
+    <Row xs={1} md={2} className="g-4">
+        <Col>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img  variant="top" onClick={this.favorite}  src={this.props.image} alt={this.props.keyword} horns={this.props.horns}></Card.Img>
+                <Card.Body>
+                    <Card.Title>{this.props.title}</Card.Title>
+                    <Card.Text>{this.props.description}{(this.state.Fav) ? '💘'  : ''}</Card.Text>
+                    <Card.Text>total votes: {this.state.votes}</Card.Text>
+                    <Button variant="primary" onClick={this.add}>Vote</Button>
+                </Card.Body>
+            </Card>
+        </Col>
+    </Row>
     )
     }
 }
+
 
 export default HornedBeast;
