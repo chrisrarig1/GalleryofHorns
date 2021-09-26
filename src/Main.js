@@ -1,6 +1,6 @@
 import React from "react";
 import HornedBeast from "./HornedBeast.js";
-import data from './data.json'
+import CardGroup from "react-bootstrap/CardGroup";
 
 class Main extends React.Component{
 // set functions
@@ -8,15 +8,22 @@ class Main extends React.Component{
 
     render(){
         //set variables
-        let beasts =[];
-        data.forEach((pics, idx) =>{
-            beasts.push(
-                <HornedBeast key={idx} title={pics.title} image={pics.image_url} alt={pics.alt} description={pics.description} />
-            )
-        })
+        let beasts = this.props.data.map((pics, idx) =>
+            <HornedBeast 
+            key={idx} 
+            title={pics.title} 
+            image={pics.image_url} 
+            alt={pics.alt} 
+            description={pics.description} 
+            clickModal={this.props.clickModal} 
+            />
+        )
         return(
             <>
-                {beasts}
+                <h2>Total Weight</h2>
+                <CardGroup>
+                    {beasts}
+                </CardGroup>
             </>
         )
     }
