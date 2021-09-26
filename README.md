@@ -1,5 +1,7 @@
 # Gallery of Horns
 
+## Author: Chris Rarig
+
 - This is a website that allow users to view and vote for their favorite picture of a animal with horns
 
 1. Display Images
@@ -19,6 +21,12 @@
     - Start time: 8:45pm CT
     - Finish time: 10:15pm CT
     - Actual time needed to complete: 1 hr 30 minutes
+
+4. Display a Modal
+    - Estimate of time needed to complete: 3 hr
+    - Start time: 2:45pm CT
+    - Finish time: N/A
+    - Actual time needed to complete: N/A
 
 **Languages**: HTML,JS, and CSS
 

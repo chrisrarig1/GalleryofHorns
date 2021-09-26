@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 
 
 
+
 class HornedBeast extends React.Component{
 //have to add for state
     constructor(props){
@@ -37,7 +38,7 @@ class HornedBeast extends React.Component{
     <Row xs={1} md={2} className="g-4">
         <Col>
             <Card style={{ width: '18rem' }}>
-                <Card.Img  variant="top" onClick={this.favorite}  src={this.props.image} alt={this.props.keyword} horns={this.props.horns}></Card.Img>
+                <Card.Img style={{size: '200px'}} variant="top" onClick={this.props.clickModal}  src={this.props.image} alt={this.props.keyword} horns={this.props.horns}></Card.Img>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>{this.props.description}{(this.state.Fav) ? '💘'  : ''}</Card.Text>
