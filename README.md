@@ -24,9 +24,9 @@
 
 4. Display a Modal
     - Estimate of time needed to complete: 3 hr
-    - Start time: 2:45pm CT
-    - Finish time: N/A
-    - Actual time needed to complete: N/A
+    - Start time: 2:45pm CT Saturday
+    - Finish time: 11pm CT Monday
+    - Actual time needed to complete: 6 hrs
 
 **Languages**: HTML,JS, and CSS
 
