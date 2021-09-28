@@ -32,16 +32,19 @@ class HornedBeast extends React.Component{
        }
        
     }
+
+    
     //ternary statement is if/else rolled into one. evaluation ? true : fals 
     render(){
     return( 
     <Row xs={1} md={2} className="g-4">
         <Col>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img style={{size: '200px'}} variant="top" onClick={this.props.clickModal}  src={this.props.image} alt={this.props.keyword} horns={this.props.horns}></Card.Img>
+            <Card border="dark" style={{ width: '18rem'}}>
+                <Card.Img style={{size: '200px'}} variant="top" onClick={() => this.props.selectTheBeast(this.props.title)}  src={this.props.image} alt={this.props.keyword} ></Card.Img>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
-                    <Card.Text>{this.props.description}{(this.state.Fav) ? '💘'  : ''}</Card.Text>
+                    <Card.Text>{this.props.description}{(this.state.Fav) ? '💘'  : ''} </Card.Text>
+                    <Card.Text> horns= {this.props.horns} </Card.Text>
                     <Card.Text>total votes: {this.state.votes}</Card.Text>
                     <Button variant="primary" onClick={this.add}>Vote</Button>
                 </Card.Body>

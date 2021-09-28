@@ -24,7 +24,14 @@ class App extends React.Component {
 clickModal = () => {
   ((this.state.showModal) ? this.setState({showModal: false}):
   this.setState({showModal:true}));
-  this.setState({selBeast: this.props.title});
+}
+
+selectTheBeast = (beastTitle) => {
+console.log(`selectTheBeast: ${beastTitle}`);
+let theBeast = this.state.data.find(item => item.title === beastTitle);
+console.log(theBeast);
+this.setState({selBeast: theBeast});
+this.clickModal();
 }
 
   render(){
@@ -34,9 +41,9 @@ clickModal = () => {
       <>
       <Container>
         <Header/>
-        <Main data={this.state.data} clickModal={this.clickModal}/>
+        <Main data={this.state.data} clickModal={this.clickModal} selectTheBeast={this.selectTheBeast}/>
           <Footer/>
-          <SelectedBeast clickModal={this.clickModal} showModal={this.state.showModal} data={this.state.data}/>
+          <SelectedBeast clickModal={this.clickModal} showModal={this.state.showModal} selBeast={this.state.selBeast}/>
       </Container>
 
 
