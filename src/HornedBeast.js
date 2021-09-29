@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 
 
 
+
 class HornedBeast extends React.Component{
 //have to add for state
     constructor(props){
@@ -37,6 +38,7 @@ class HornedBeast extends React.Component{
     //ternary statement is if/else rolled into one. evaluation ? true : fals 
     render(){
     return( 
+        
     <Row xs={1} md={2} className="g-4">
         <Col>
             <Card border="dark" style={{ width: '18rem'}}>
