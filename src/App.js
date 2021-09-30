@@ -59,7 +59,7 @@ handleChange = (event) => {
       <Container>
         <Header />
         
-        <Form.Select aria-label="Default select example" name="horns" id="horns" onChange={this.handleChange}>
+        <Form.Select aria-label="Default select example" name="horns" id="horns" onChange={this.handleChange} size='lg' >
             <option value="All">Filter by Horns</option>
             <option value='1'>One</option>
             <option value="2">Two</option>

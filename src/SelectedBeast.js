@@ -14,7 +14,7 @@ return(
           <Modal.Title>{this.props.selBeast.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Card style={{ width: 'auto' }}>
+        <Card style={{ width: 'auto'}}>
                 <Card.Img style={{size: '200px'}} variant="top"  src={this.props.selBeast.image_url} alt={this.props.selBeast.keyword} ></Card.Img>
                 <Card.Body>
                     <Card.Text>{this.props.selBeast.description}</Card.Text>

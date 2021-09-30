@@ -1,5 +1,4 @@
 import React from "react";
-import './HornedBeast.css';
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -9,11 +8,11 @@ import Col from "react-bootstrap/Col";
 
 
 
+
 class HornedBeast extends React.Component{
-//have to add for state
+
     constructor(props){
         super(props);
-        //state must be an object
         this.state = {
             votes: 0,
             Fav: false,
@@ -25,30 +24,20 @@ class HornedBeast extends React.Component{
         console.log('voted');
     }
 
-    favorite = () => {
-       if(this.state.Fav){
-            this.setState({Fav: false});
-       }else{
-            this.setState({Fav: true});
-       }
-       
-    }
 
-    
-    //ternary statement is if/else rolled into one. evaluation ? true : fals 
     render(){
     return( 
         
     <Row xs={1} md={2} className="g-4">
         <Col>
-            <Card border="dark" style={{ width: '18rem'}}>
-                <Card.Img style={{size: '200px'}} variant="top" onClick={() => this.props.selectTheBeast(this.props.title)}  src={this.props.image} alt={this.props.keyword} ></Card.Img>
+            <Card border="dark" style={{ width: '18rem', margin:"1rem"}}>
+                <Card.Img style={{width:'auto', height:'auto'}} variant="top" onClick={() => this.props.selectTheBeast(this.props.title)}  src={this.props.image} alt={this.props.keyword} ></Card.Img>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
-                    <Card.Text>{this.props.description}{(this.state.Fav) ? '💘'  : ''} </Card.Text>
+                    <Card.Text>{this.props.description} </Card.Text>
                     <Card.Text> horns= {this.props.horns} </Card.Text>
                     <Card.Text>total votes: {this.state.votes}</Card.Text>
-                    <Button variant="primary" onClick={this.add}>Vote</Button>
+                    <Button variant="primary" onClick={this.add}>Vote 💘 </Button>
                 </Card.Body>
             </Card>
         </Col>
