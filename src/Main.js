@@ -23,7 +23,7 @@ class Main extends React.Component{
         )
         return(
             <>
-                <h2>Total Weight</h2>
+                
                 <CardGroup>
                     {beasts}
                 </CardGroup>
